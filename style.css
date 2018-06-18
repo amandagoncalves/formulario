@@ -1,0 +1,114 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	position: relative;
+}
+
+html, body {
+	display: flex;
+	justify-content: center;align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #228b22;
+	width: 100%;
+	height: 100%;
+}
+
+main {
+	/*background: rgba(255, 255, 255, 0.2);*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 70%;
+	height: 100vh;
+
+}
+main h1 {
+	color:#fff;
+}
+
+.ft-perfil {
+	width: 30%;
+	border-radius: 50%;
+	animation: movepic 10s linear 0s infinite alternate;
+}
+
+@keyframes movepic {
+	0% { left: -15%; top: -10%; }
+	20% { left:-10%; top: -5%;}
+	40% { left: -5%; top: 0%;}
+	60% { left: 5%; top: -5%;}
+	80% { left: 10%; top: -10%;}
+	100% { left: 15%; top: -5%; }
+}
+
+main div{
+	display: flex;
+	justify-content: center;
+}
+main div a {
+	width: 7%;
+	padding: 4px;
+}
+main div a img {
+	width: 100%;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer p {
+	color: #fff;
+	font-size: 11px;
+}
+footer span {
+	font-weight: bold;
+	font-size: 13px;
+	color: #55f;
+}
+footer a {
+	color: #ff5;
+	text-decoration: inherit;
+	font-weight: bold;
+	font-size: 13px;
+	font-style: italic;
+
+}
+
+@media (max-width: 600px){
+	main {
+		width: 100%;
+	}
+	.ft-perfil {
+		width: 50%;
+	}
+
+	@keyframes movepic {
+		0% { left: -15%; top: -20%; }
+		20% { left:-10%; top: -0%;}
+		40% { left: -5%; top: -20%;}
+		60% { left: 5%; top: -0%;}
+		80% { left: 10%; top: -20%;}
+		100% { left: 15%; top: -0%; }
+		
+	}
+
+	main h1 {
+		font-size: 25px;
+	}
+	footer p {
+		font-size: 9px;
+	}
+	footer span, footer a {
+		font-size: 11px;
+	}
+}]
